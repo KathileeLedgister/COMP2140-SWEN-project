@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html class="ui-mobile-rendering tob-pwapps">
+    <head>
+        <title>Nailz</title>
+        <meta charset=UTF-8>
+    </head>
+
+    <body id="page-body">
+        <iframe name="main-iframe" style="display:none" src="about:blank"></iframe>
+        <div class="vp-h-25">
+            <button type="button" class="btn btn-secondary btn-lg btn-block ui-corner-top-lf ui-corner-top-rt">Nailz Appointments</button>            
+            <img class="d-block w-100" src="images/nails-intro.png" alt="Nailz">
+        </div>
+        <div class="spacer-5">
+        </div>
+        <form target="main-iframe" id="main-form" class="needs-validation" enctype="application/x-www-form-urlencoded" method="post"  action="about:blank" novalidate>
+            <div class="form-group row col-sm-8">
+                <label class="col-sm-6 col-form-label" for="userid">UserID:&nbsp;</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="text" class="form-control" id="userid" name="userid" value = "" placeholder="e.g. nailz012" required>
+                </div>
+            </div>            
+            <div class="form-group row  col-sm-8">
+                <label class="col-sm-6 col-form-label" for="password">Password:&nbsp;</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="password" class="form-control" id="password"  value = ""  name="password" aria-describedby="passwordHelpBlock" placeholder="e.g. pwd@13.z1">
+                </div>
+            </div>            
+
+            <!-- ONLY SHOW IF USER ID NOT FOUND -->
+            <!--
+            ============================================================================================================
+            USAGE:
+                pg_get  : add this attribute to SUBIMT as a GET request
+                pg_data : specify a list of dubmit pairs to - incluse in submit data1=5*data2=6,...
+                pg_url  : the request to submit to trhe application server e.g. "api/signin"
+                pg_url_next : the page to replace the submit page with. page remains the same otherwise "pg/calendar.html"
+            
+                .app-hidden class: hides this section of the page when loaded, the fields are SUBMITTED !!!!
+                .app-visible class : shows this section of the page
+            ============================================================================================================
+            -->
+            <div id="signin-block" class="app-visible">
+                <button id="app-signin" class="app-btn app-submit btn btn-primary" type="button" pg_url="api/r1/signin">Sign In</button>
+                <button id="app-install" class="app-btn btn btn-success rt-floats" type="button" pg_url="api/r1/install">Install</button>
+                <button id="app-subscribe" class="app-btn app-submit btn btn-secondary rt-floats app-hidden" type="button" pg_url="api/r1/signin">Subscribe</button>
+            </div>
+            <div id="signup-block" class="app-hidden">
+                <div class="form-group row col-sm-8">
+                    <label class="col-sm-6 col-form-label" for="fullname">Full Name:&nbsp;</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="fullname" name="fullname" value = "" placeholder="e.g. Marie Smith">
+                    </div>
+                </div>            
+
+                <div class="form-group row col-sm-8">
+                    <label class="col-sm-6 col-form-label" for="email">E-Mail:&nbsp;</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <!-- "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" -->
+                        <!--<input type="text" class="form-control" id="email" name="email" value = "" placeholder="e.g. msmith@gmail.com." pattern="([A-Za-z0-9!#-'*+\-/=?^_`{-~\xA0-\x{10FFFF}]+(?:\.[A-Za-z0-9!#-'*+\-/=?^_`{-~\xA0-\x{10FFFF}])|\"(?:[ !#-\[\]-~\xA0-\x{10FFFF}]|\\[ -~])*\")@((?:[A-Za-z0-9](?:[A-Za-z0-9\-]*[A-Za-z0-9])?|[\x00-\x{10FFFF}]*[\x80-\x{10FFFF}]+[\x00-\x{10FFFF}]*)(?:\.(?:[A-Za-z0-9](?:[A-Za-z0-9\-]*[A-Za-z0-9])?|[\x00-\x{10FFFF}]*[\x80-\x{10FFFF}]+[\x00-\x{10FFFF}]*))*)">-->
+                        <input type="text" class="form-control" id="email" name="email" value = "" placeholder="e.g. msmith@gmail.com.">
+                        <!-- pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">-->
+                    </div>
+                </div>            
+
+                <div class="form-group row col-sm-8">
+                    <label class="col-sm-6 col-form-label" for="phone">Phone Number:&nbsp;</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="phone" name="phone" value = "" placeholder="e.g. 8761234567">
+                    </div>
+                </div>            
+
+                <div class="form-group row col-sm-8">
+                    <label class="col-sm-6 col-form-label" for="allergy">Allergies:&nbsp;</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="allergy" name="allergy" value = "" placeholder="e.g. Acetone">
+                    </div>
+                </div>            
+
+                <input class="form-check" type="hidden" id="notify" name="notify" value="">
+                <div class="form-group">
+                    <div class="form-check form-control-lg custom-control custom-checkbox indented-ctrl"> <!--disabled-->
+                        <input class="form-check-input custom-control-input" type="checkbox" value="" id="agreeterms" checked="checked" required>
+                        <label class="form-check-label custom-control-label indented-label" for="agreeterms">
+                            I Agree to terms and conditions
+                        </label>
+                    </div>
+                </div>
+         
+                <button id="app-signup" class="app-btn app-submit btn btn-primary" type="button" pg_url="api/r1/signup">Sign Up</button>
+            </div>
+        </form>      
+    </body>
+</html>

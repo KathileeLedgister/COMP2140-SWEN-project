@@ -1,0 +1,264 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 22, 2020, 2:14:27 PM
+    Author     : vledgister
+*/
+
+#page-body {
+    background-color: #ece9df;   
+}
+
+html {
+    font-size: 1.2rem;
+}
+
+html .page-container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.ui-corner-all-force{
+    border-radius: .6em !important;
+}
+/*-----------------------*/
+
+@media all and (display-mode: standalone) {
+    /*#tobinstall {
+      display: none;
+    }*/
+}
+
+/* For portrait, full screen usage */
+@media (min-width: 1024px) , screen and (orientation: portrait) {
+    #page-content,
+    #cal-tab{
+        max-width: 600px;
+        /*max-width: max(70vw,100vh);*/
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #page-content,
+    #cal-tab{
+        max-width: 600px;
+        /*max-width: max(70vw,100vh);*/
+    }
+}
+
+.app-visible {
+    display: block;
+}
+
+.app-hidden {
+    display: none !important;
+}
+
+.rt-floats {
+    float: right;
+}
+
+.vp-h-25{
+    max-height: 25vh;
+    overflow: hidden;
+}
+
+.spacer-5{
+    height: 5vh;
+}
+
+.ui-corner-top-lf{
+    border-top-left-radius: .6rem;
+}
+
+.ui-corner-top-rt{
+    border-top-right-radius: .6rem;
+}
+
+
+#app-install{
+    background-color: #94ce59;
+    display: none;
+    margin-left: 20px;
+    color: black;
+}
+
+/* no need
+==================
+.col-form-label,
+.form-control,
+.app-btn{
+    font-size: 1.3rem;
+}*/
+
+
+/*=============================
+ table formatting
+*/
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+    position: sticky;    
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+#date-rng /*caption*/ {
+    padding: 0px;
+    caption-side: top;
+    text-align: center;
+    font-weight: 900;
+    /*font-size: 0.9rem;*/
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    /*font-family: sans-serif;*/
+    font-size: .9rem;
+    width: 97vw;
+}
+
+th:nth-child(1) {
+    width: 1px;
+    text-align: right;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+/*=============================
+ table formatting
+*/
+td.cal-no{
+    background-color: lightgray;
+}
+
+td.cal-navail{
+    background-color: lightgray;
+}
+
+td.cal-user-lock{
+    background-color: forestgreen;
+}
+
+td.cal-other-lock{
+    background-color: tomato;
+}
+
+#cal-wk,
+#cal-ft{
+    text-align: center;
+    /*font-size: 1.2rem;*/
+    font-weight: bold;
+}
+
+#cal-wk{
+    background-color: yellow;    
+}
+#cal-ft{
+    background-color: aqua;    
+}
+
+td.cal-user-lock.cal-user-lock-setrq{
+    background-color: yellow;
+}
+td.cal-user-lock.cal-user-lock-delrq{
+    background-color: #fc51ff;
+}
+
+#cal-hd th ,
+tr:last-child th{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+td.menu-active{
+    background-color: aqua;
+    text-align: center;
+    /*font-size: 1.2rem;*/
+    font-weight: bold;
+    padding: 0;
+}
+
+/*.custom-control-label::before, 
+.custom-control-label::after {*/
+/*.custom-control-input{
+    top: .8rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}*/
+
+
+#t-menu, 
+#d-menu,
+#app-message{
+    position: absolute; 
+    top: 0; 
+    right: 0;
+}
+
+#app-message.app-notice{
+    background-color: greenyellow;
+}
+
+#app-message.app-error{
+    background-color: red;
+    color: white;
+}
+
+#app-message.app-warning{
+    background-color: gold;
+    color: white;
+}
+
+#menu-options{
+    width: -webkit-fill-available;
+}
+
+.app-menu-option{
+    background-color: #d4c2b0;
+    color: black;  
+}
+
+.custom-control-label::before {
+    top: .1rem;
+    left: -1.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.indented-ctrl{
+    margin-left: 10px;
+}
+
+.indented-label{
+    padding-left: 10px;
+}
+
+.app-menu-option,
+#d-menu,
+#app-message{
+    /*font-size:1.1rem;*/
+}
